@@ -8,6 +8,7 @@ using Rage;
 using System.Windows.Forms;
 using DutchCallouts;
 using System.Reflection;
+using DutchCallouts.Stuff;
 
 
 namespace DutchCallouts
@@ -51,6 +52,7 @@ namespace DutchCallouts
             Functions.RegisterCallout(typeof(Callouts.SuperCar));
             Functions.RegisterCallout(typeof(Callouts.Backup));
             Functions.RegisterCallout(typeof(Callouts.GezondheidCheck));
+            Functions.RegisterCallout(typeof(Callouts.Onruststoker));
         }
     }
 }

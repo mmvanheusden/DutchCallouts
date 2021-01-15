@@ -55,13 +55,15 @@
     <Compile Include="Callouts\GestolenVoertuig.cs" />
     <Compile Include="Callouts\Gevecht.cs" />
     <Compile Include="Callouts\GezondheidCheck.cs" />
+    <Compile Include="Callouts\Inbraak.cs" />
     <Compile Include="Callouts\KillerClown.cs" />
+    <Compile Include="Callouts\Onruststoker.cs" />
     <Compile Include="Callouts\SuperCar.cs" />
     <Compile Include="Callouts\Truck.cs" />
-    <Compile Include="Common.cs" />
+    <Compile Include="Stuff\Common.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
+    <Compile Include="Stuff\Settings.cs" />
     <Compile Include="Stuff\DCFunctions.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -9,7 +9,7 @@ namespace DutchCallouts.Callouts
     [CalloutInfo("KillerClownGezien", CalloutProbability.Medium)]
     public class KillerClownGezien : Callout
     {
-        private string[] pedList = new string[] { "player_two" };
+        private string[] pedList = new string[] { "s_m_y_clown_01" };
         private string[] wepList = new string[] { "WEAPON_PISTOL", "WEAPON_BAT", "WEAPON_KNIFE", "WEAPON_BOTTLE", "WEAPON_MUSKET", "WEAPON_MACHETE" };
         private Ped _subject;
         private Vector3 _SpawnPoint;

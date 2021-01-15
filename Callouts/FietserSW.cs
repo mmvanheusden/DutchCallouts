@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace DutchCallouts.Callouts
 {
-    [CalloutInfo("Fietser op de snelweg", CalloutProbability.Medium)]
+    [CalloutInfo("FietserSW", CalloutProbability.Medium)]
     public class FietserSW : Callout
     {
         private string[] pedList = new string[] { "A_F_Y_Hippie_01", "A_M_Y_Skater_01", "A_M_M_FatLatin_01", "A_M_M_EastSA_01", "A_M_Y_Latino_01", "G_M_Y_FamDNF_01", "G_M_Y_FamCA_01", "G_M_Y_BallaSout_01", "G_M_Y_BallaOrig_01", "G_M_Y_BallaEast_01", "G_M_Y_StrPunk_02", "S_M_Y_Dealer_01", "A_M_M_RurMeth_01", "A_M_Y_MethHead_01", "A_M_M_Skidrow_01", "S_M_Y_Dealer_01", "a_m_y_mexthug_01", "G_M_Y_MexGoon_03", "G_M_Y_MexGoon_02", "G_M_Y_MexGoon_01", "G_M_Y_SalvaGoon_01", "G_M_Y_SalvaGoon_02", "G_M_Y_SalvaGoon_03", "G_M_Y_Korean_01", "G_M_Y_Korean_02", "G_M_Y_StrPunk_01" };
@@ -138,7 +138,7 @@ namespace DutchCallouts.Callouts
                 if (Game.IsKeyDown(Settings.EndCall)) End();
                 if (_subject.IsDead) End();
                 if (Functions.IsPedArrested(_subject)) End();
-            }, "Fiets op de snelweg [DutchCallouts]");
+            }, "FietserSW [DutchCallouts]");
             base.Process();
         }
 
