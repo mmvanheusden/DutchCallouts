@@ -53,6 +53,10 @@ namespace DutchCallouts
             Functions.RegisterCallout(typeof(Callouts.Backup));
             Functions.RegisterCallout(typeof(Callouts.GezondheidCheck));
             Functions.RegisterCallout(typeof(Callouts.Onruststoker));
+            Functions.RegisterCallout(typeof(Callouts.Inbraak));
+            Functions.RegisterCallout(typeof(Callouts.Drug));
+            Functions.RegisterCallout(typeof(Callouts.Schieter));
+            Functions.RegisterCallout(typeof(Callouts.Gezocht));
         }
     }
 }

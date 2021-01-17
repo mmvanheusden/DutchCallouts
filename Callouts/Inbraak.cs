@@ -8,11 +8,11 @@ using System.Collections.Generic;
 
 namespace DutchCallouts.Callouts
 {
-    [CalloutInfo("Burglary into an apartment", CalloutProbability.Medium)]
-    public class Burglary : Callout
+    [CalloutInfo("Inbraak", CalloutProbability.Medium)]
+    public class Inbraak : Callout
     {
         private string[] pedList = new string[] { "g_m_m_chicold_01", "mp_g_m_pros_01" };
-        private string[] wepList = new string[] { "WEAPON_PISTOL", "WEAPON_SMG", "WEAPON_MACHINEPISTOL", "WEAPON_PUMPSHOTGUN" };
+        private string[] wepList = new string[] { "WEAPON_PISTOL", "WEAPON_SMG", "WEAPON_MACHINEPISTOL", "WEAPON_PUMPSHOTGUN", "WEAPON_BOTTLE", "WEAPON_CROWBAR", "WEAPON_WRENCH" };
         public Vector3 _SpawnPoint;
         public Vector3 _searcharea;
         private Vector3 _Location1;
@@ -124,7 +124,7 @@ namespace DutchCallouts.Callouts
             }
             _scenario = new Random().Next(0, 100);
             ShowCalloutAreaBlipBeforeAccepting(_SpawnPoint, 15f);
-            CalloutMessage = "~b~Dispatch:~s~ Burglary into an apartment";
+            CalloutMessage = "~b~Meldkamer:~s~ Inbraak in een apartament";
             CalloutPosition = _SpawnPoint;
             Functions.PlayScannerAudioUsingPosition("ATTENTION_ALL_UNITS CRIME_BURGLARY_IN IN_OR_ON_POSITION", _SpawnPoint);
             return base.OnBeforeCalloutDisplayed();
@@ -132,7 +132,7 @@ namespace DutchCallouts.Callouts
         public override bool OnCalloutAccepted()
         {
             Game.LogTrivial("DutchCallouts Log: Burglary callout accepted.");
-            Game.DisplayNotification("web_lossantospolicedept", "web_lossantospolicedept", "~w~DutchCallouts", "~y~Burglary into an apartment", "~b~Dispatch: ~w~Try to ~o~find the apartment~w~ and arrest the burglar. Respond with ~r~CODE 3");
+            Game.DisplayNotification("web_lossantospolicedept", "web_lossantospolicedept", "~w~DutchCallouts", "~y~Inbraak in een apartament", "~b~Meldkamer: ~w~Probeer het ~o~apartament~w~ te vindedn en arresteer de inbreker. reageer met ~r~CODE 3");
 
             _Aggressor = new Ped(pedList[new Random().Next((int)pedList.Length)], _SpawnPoint, 0f);
             _Aggressor.IsPersistent = true;
@@ -168,8 +168,8 @@ namespace DutchCallouts.Callouts
                 if (_Aggressor.DistanceTo(Game.LocalPlayer.Character) < 25f && !_notificationDisplayed)
                 {
                     if (_Blip.Exists()) _Blip.Delete();
-                    Game.DisplayNotification("web_lossantospolicedept", "web_lossantospolicedept", "~w~DutchCallouts", "~y~Burglary into an apartment", "~b~Dispatch: ~w~You should be in the near of the ~y~apartment~w~. Try to arrest the ~o~burglar~w~.");
-                    Game.DisplayNotification("~b~Dispatch:~w~ Officer arrived on scene. Be careful!");
+                    Game.DisplayNotification("web_lossantospolicedept", "web_lossantospolicedept", "~w~DutchCallouts", "~y~Inbraak in een apartament", "~b~Meldkamer: ~w~Je bent in de buurt van het ~y~apartament~w~. Probeer de ~o~inbreker~w~ te arresteren.");
+                    Game.DisplayNotification("~b~Meldkamer:~w~ Agent gearriveerd. Wees voorzichtig");
                     _notificationDisplayed = true;
                 }
                 if (Game.LocalPlayer.Character.DistanceTo(_Victim) < 8f)
@@ -205,7 +205,7 @@ namespace DutchCallouts.Callouts
                 if (Game.IsKeyDown(Settings.EndCall)) End();
                 if (_Aggressor.IsDead) End();
                 if (Functions.IsPedArrested(_Aggressor)) End();
-            }, "Burglary [DutchCallouts]");
+            }, "Inbraak [DutchCallouts]");
             base.Process();
         }
 
@@ -214,7 +214,7 @@ namespace DutchCallouts.Callouts
             if (_Blip.Exists()) _Blip.Delete();
             if (_Victim.Exists()) _Victim.Dismiss();
             if (_Aggressor.Exists()) _Aggressor.Dismiss();
-            Game.DisplayNotification("web_lossantospolicedept", "web_lossantospolicedept", "~w~DutchCallouts", "~y~Burglary into an apartment", "~b~You: ~w~Dispatch we're CODE 4. Show me ~g~10-8.");
+            Game.DisplayNotification("web_lossantospolicedept", "web_lossantospolicedept", "~w~DutchCallouts", "~y~Inbraak in een apartament", "~b~CODE 4");
             Functions.PlayScannerAudio("ATTENTION_THIS_IS_DISPATCH_HIGH WE_ARE_CODE FOUR NO_FURTHER_UNITS_REQUIRED");
             base.End();
         }
