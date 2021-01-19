@@ -78,6 +78,7 @@ namespace DutchCallouts.Callouts
             Game.DisplayNotification("web_lossantospolicedept", "web_lossantospolicedept", "~w~DutchCallouts", "~y~Meldkamer", "~g~Informatie~w~ laden uit de ~y~LSPD Database~w~...");
             GameFiber.Wait(1000);
             Functions.DisplayPedId(_Dealer, true);
+            Functions.DisplayPedId(_Victim, true);
 
             _Victim = new Ped(_Dealer.GetOffsetPosition(new Vector3(0, 1.8f, 0)));
             _Victim.BlockPermanentEvents = true;

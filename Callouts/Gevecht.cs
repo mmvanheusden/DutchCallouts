@@ -75,7 +75,7 @@ namespace DutchCallouts.Callouts
                 if (Game.IsKeyDown(Settings.EndCall)) End();
                 if (_AG1.IsDead && _AG2.IsDead) End();
                 if (Functions.IsPedArrested(_AG1) && Functions.IsPedArrested(_AG2)) End();
-            }, "Fighting [DutchCallouts]");
+            }, "Gevecht [DutchCallouts]");
             base.Process();
         }
 

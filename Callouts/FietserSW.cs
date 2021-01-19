@@ -149,6 +149,7 @@ namespace DutchCallouts.Callouts
             if (_Blip.Exists()) _Blip.Delete();
             Game.DisplayNotification("web_lossantospolicedept", "web_lossantospolicedept", "~w~DutchCallouts", "~y~Fiets op de snelweg", "~b~CODE 4");
             Functions.PlayScannerAudio("ATTENTION_THIS_IS_DISPATCH_HIGH WE_ARE_CODE FOUR NO_FURTHER_UNITS_REQUIRED");
+            _IsStolen = false;
             base.End();
         }
     }

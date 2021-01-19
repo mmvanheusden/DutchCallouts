@@ -44,12 +44,10 @@ namespace DutchCallouts
 
         private static void RegisterCallouts()
         {
-            Functions.RegisterCallout(typeof(Callouts.GestolenVoertuig));
             Functions.RegisterCallout(typeof(Callouts.KillerClownGezien));
             Functions.RegisterCallout(typeof(Callouts.FietserSW));
             Functions.RegisterCallout(typeof(Callouts.Gevecht));
             Functions.RegisterCallout(typeof(Callouts.Truck));
-            Functions.RegisterCallout(typeof(Callouts.SuperCar));
             Functions.RegisterCallout(typeof(Callouts.Backup));
             Functions.RegisterCallout(typeof(Callouts.GezondheidCheck));
             Functions.RegisterCallout(typeof(Callouts.Onruststoker));
@@ -57,6 +55,7 @@ namespace DutchCallouts
             Functions.RegisterCallout(typeof(Callouts.Drug));
             Functions.RegisterCallout(typeof(Callouts.Schieter));
             Functions.RegisterCallout(typeof(Callouts.Gezocht));
+            Functions.RegisterCallout(typeof(Callouts.Gijzelaars));
         }
     }
 }

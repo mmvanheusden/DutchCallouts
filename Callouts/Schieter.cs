@@ -104,6 +104,7 @@ namespace DutchCallouts.Callouts
                         _V3.RelationshipGroup = "VI";
                         Game.SetRelationshipBetweenRelationshipGroups("AG", "VI", Relationship.Hate);
                         _subject.Tasks.FightAgainstClosestHatedTarget(1000f);
+                        Functions.PlayScannerAudio("INTRO_02 CRIME_GUNFIRE_01");
                         Game.DisplayNotification("~b~Meldkamer: ~w~Het Gepanserd Persoon is aan het ~r~schieten~w~ op mensen!");
                         GameFiber.Wait(2000);
                         _subject.Tasks.FightAgainst(Game.LocalPlayer.Character);

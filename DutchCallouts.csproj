@@ -35,6 +35,9 @@
     <Reference Include="LSPD First Response">
       <HintPath>..\..\dllss\LSPD First Response.dll</HintPath>
     </Reference>
+    <Reference Include="RAGENativeUI">
+      <HintPath>..\..\dllss\RAGENativeUI.dll</HintPath>
+    </Reference>
     <Reference Include="RagePluginHookSDK">
       <HintPath>..\..\dllss\RagePluginHookSDK.dll</HintPath>
     </Reference>
@@ -53,15 +56,14 @@
     <Compile Include="Callouts\Backup.cs" />
     <Compile Include="Callouts\Drug.cs" />
     <Compile Include="Callouts\FietserSW.cs" />
-    <Compile Include="Callouts\GestolenVoertuig.cs" />
     <Compile Include="Callouts\Gevecht.cs" />
     <Compile Include="Callouts\Gezocht.cs" />
     <Compile Include="Callouts\GezondheidCheck.cs" />
+    <Compile Include="Callouts\Gijzelaars.cs" />
     <Compile Include="Callouts\Inbraak.cs" />
     <Compile Include="Callouts\KillerClown.cs" />
     <Compile Include="Callouts\Onruststoker.cs" />
     <Compile Include="Callouts\Schieter.cs" />
-    <Compile Include="Callouts\SuperCar.cs" />
     <Compile Include="Callouts\Truck.cs" />
     <Compile Include="Stuff\Common.cs" />
     <Compile Include="Main.cs" />
