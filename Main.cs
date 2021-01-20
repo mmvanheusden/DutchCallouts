@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using DutchCallouts;
 using System.Reflection;
 using DutchCallouts.Stuff;
+using DutchCallouts.Versie;
 
 
 namespace DutchCallouts
@@ -34,11 +35,12 @@ namespace DutchCallouts
                 {
                     RegisterCallouts();
                     Game.DisplayNotification(
-                        "web_lossantospolicedept", // You can find all logos/images in OpenIV
-                        "web_lossantospolicedept", // You can find all logos/images in OpenIV
-                        "DutchCallouts",
-                        "",
-                        "~b~succesvol ingeladen!");
+                       "web_lossantospolicedept", // You can find all logos/images in OpenIV
+                       "web_lossantospolicedept", // You can find all logos/images in OpenIV
+                       "DutchCallouts", // Title
+                       "~y~v" + Assembly.GetExecutingAssembly().GetName().Version.ToString() +
+                       " ~o~door Maarten", "~b~Succesvol ingeladen!!"); // Subtitle
+                    Versie.Versie.isUpdateAvailable();
                 });
         }
 
