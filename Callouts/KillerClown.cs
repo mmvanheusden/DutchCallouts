@@ -20,7 +20,6 @@ namespace DutchCallouts.Callouts
         private bool _hasBegunAttacking = false;
         private bool _isArmed = false;
         private bool _hasPursuitBegun = false;
-
         public override bool OnBeforeCalloutDisplayed()
         {
             _scenario = new Random().Next(0, 100);
@@ -35,7 +34,7 @@ namespace DutchCallouts.Callouts
         public override bool OnCalloutAccepted()
         {
             Game.LogTrivial("DutchCallouts Log: KillerClownGezien callout accepted.");
-            Game.DisplayNotification("web_lossantospolicedept", "web_lossantospolicedept", "~w~DutchCallouts", "~y~KillerClown is gezien", "~b~Meldkamer: ~w~De ~r~Killer Clown~w~ heeft mogelijk dodelijk wapens! Reageer met ~r~CODE 3!");
+            Game.DisplayNotification("web_lossantospolicedept", "web_lossantospolicedept", "~w~DutchCallouts", "~y~KillerClown is gezien", "~b~Meldkamer: ~w~De ~r~Killer Clown~w~ heeft mogelijk dodelijke wapens! Reageer met ~r~CODE 3!");
 
             _subject = new Ped(pedList[new Random().Next((int)pedList.Length)], _SpawnPoint, 0f);
             _subject.Inventory.GiveNewWeapon("WEAPON_UNARMED", 500, true);

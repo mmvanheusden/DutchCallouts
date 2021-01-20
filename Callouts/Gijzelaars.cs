@@ -152,7 +152,7 @@ namespace DutchCallouts.Callouts
             _SpawnLocation.Color = Color.Yellow;
             _SpawnLocation.Alpha = 2f;
 
-            Functions.PlayScannerAudioUsingPosition("UNITS WE_HAVE", _SpawnPoint);
+            Functions.PlayScannerAudioUsingPosition("OFFICERS_REPORT_03 CRIME_CIVILIAN_NEEDING_ASSISTANCE_IN IN_OR_ON_POSITION", _SpawnPoint);
             Game.DisplayNotification("web_lossantospolicedept", "web_lossantospolicedept", "~w~DutchCallouts", "~y~FIB", "De politie heeft het ~y~Gijzelaar Reddingsteam~w~ gebelt om alle ~o~Gegijzelde~w~ te redden.");
             return base.OnCalloutAccepted();
         }

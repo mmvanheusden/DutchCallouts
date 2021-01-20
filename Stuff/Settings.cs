@@ -7,6 +7,6 @@ namespace DutchCallouts
     {
         internal static Keys EndCall = Keys.End;
         internal static Keys Dialog = Keys.Y;
-        public static readonly string CalloutVersion = "1.1.0";
+        public static readonly string CalloutVersion = "1.2.0";
     }
 }

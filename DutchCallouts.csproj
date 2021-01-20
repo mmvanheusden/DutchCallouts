@@ -56,6 +56,7 @@
     <Compile Include="Callouts\Backup.cs" />
     <Compile Include="Callouts\Drug.cs" />
     <Compile Include="Callouts\FietserSW.cs" />
+    <Compile Include="Callouts\GestolenFiets.cs" />
     <Compile Include="Callouts\Gevecht.cs" />
     <Compile Include="Callouts\Gezocht.cs" />
     <Compile Include="Callouts\GezondheidCheck.cs" />

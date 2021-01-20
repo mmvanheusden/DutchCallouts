@@ -20,8 +20,6 @@ namespace DutchCallouts
         public override void Initialize()
         {
             Functions.OnOnDutyStateChanged += OnOnDutyStateChangedHandler;
-            Game.LogTrivial("Plugin " + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString() + " door Maarten is ingeladen.");
-            Game.LogTrivial("Ga on duty om de plugin volledig in te laden.");
         }
         public override void Finally()
         {
@@ -58,6 +56,7 @@ namespace DutchCallouts
             Functions.RegisterCallout(typeof(Callouts.Schieter));
             Functions.RegisterCallout(typeof(Callouts.Gezocht));
             Functions.RegisterCallout(typeof(Callouts.Gijzelaars));
+            Functions.RegisterCallout(typeof(Callouts.GestolenFiets));
         }
     }
 }
